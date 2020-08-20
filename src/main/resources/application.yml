@@ -1,0 +1,9 @@
+server.port: 8085
+spring:
+  jpa:
+    hibernate.ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/online_shop?serverTimezone=UTC
+    username: online-shop
+    password: online-shop
