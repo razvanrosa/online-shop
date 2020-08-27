@@ -1,29 +1,13 @@
-package org.fasttrackit.onlineshop.domain;
+package org.fasttrackit.onlineshop.transfer;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
-@Entity
-public class User {
-
-    @Id
-    @GeneratedValue
-    private long id;
+public class SaveUserRequest {
 
     @NotNull
     private String firstName;
     @NotNull
     private String lastName;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -43,9 +27,8 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
+        return "CreateUserRequest{" +
+                "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
     }
